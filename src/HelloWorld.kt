@@ -1,6 +1,6 @@
 class HelloWorld(private val name: String) {
     fun hello() {
-        println("Hello, $name")
+        println("Hello $name")
     }
 }
 
@@ -8,15 +8,15 @@ class HelloWorld(private val name: String) {
 //fun main() {
 // Kotlin 1.3之前的版本必须带参数
 fun main(args: Array<String>) {
-    println("Hello World")
+    println("Hello World 1")
 
-    val name = if (args.isEmpty() || args[0].isEmpty()) "World!" else args[0]
-    println("Hello $name")
+    HelloWorld("World 2").hello()
 
-    HelloWorld(name).hello()
+    val name = if (args.isEmpty() || args[0].isEmpty()) "World" else args[0]
+    println("Hello $name 3")
 
     for (str in args) {
-        println("Hello, $str!")
+        println("Hello $str 4")
     }
 
     val language = if (args.isEmpty()) "EN" else args[0]
