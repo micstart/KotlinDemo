@@ -1,3 +1,5 @@
+import java.util.Locale.getDefault
+
 /**
  * 类声明由类名、类头（指定其类型参数、主构造函数等）以及由花括号包围的类体构成。
  * 类头与类体都是可选的；如果一个类没有类体，可以省略花括号。
@@ -22,11 +24,11 @@ class Person2(firstName: String)
  * 可以在变量定义时或init块中初始化
  */
 class Person3(firstName: String) {
-    private var orginalFirstName = firstName;
-    var uppercaseFirstName: String;
+    private var originalFirstName = firstName
+    var uppercaseFirstName: String
 
     init {
-        uppercaseFirstName = orginalFirstName.toUpperCase();
+        uppercaseFirstName = originalFirstName.uppercase(getDefault())
     }
 }
 
